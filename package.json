@@ -39,12 +39,12 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@atproto/lexicon": "0.6.1",
+    "@atproto/lexicon": "0.6.2",
     "multiformats": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@atproto/lex-cli": "0.9.8",
+    "@atproto/lex-cli": "0.9.9",
     "@commitlint/cli": "catalog:",
     "@commitlint/config-conventional": "catalog:",
     "@types/node": "catalog:",
