@@ -6,6 +6,7 @@ import {
   voteSchema,
   actorPreferencesSchema,
   communityRefSchema,
+  actorSignatureSchema,
 } from '../src/validation/index.js'
 
 const VALID_DID = 'did:plc:abc123def456'
@@ -357,5 +358,53 @@ describe('communityRefSchema', () => {
 
   it('rejects missing did field', () => {
     expect(communityRefSchema.safeParse({}).success).toBe(false)
+  })
+})
+
+describe('actorSignatureSchema', () => {
+  it('validates a valid signature', () => {
+    const result = actorSignatureSchema.safeParse({
+      text: 'Building forums for the open web',
+      createdAt: '2026-03-04T12:00:00.000Z',
+    })
+    expect(result.success).toBe(true)
+  })
+
+  it('rejects empty text', () => {
+    const result = actorSignatureSchema.safeParse({
+      text: '',
+      createdAt: '2026-03-04T12:00:00.000Z',
+    })
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects text exceeding 3000 bytes', () => {
+    const result = actorSignatureSchema.safeParse({
+      text: 'a'.repeat(3001),
+      createdAt: '2026-03-04T12:00:00.000Z',
+    })
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects missing createdAt', () => {
+    const result = actorSignatureSchema.safeParse({
+      text: 'Hello',
+    })
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects invalid datetime format', () => {
+    const result = actorSignatureSchema.safeParse({
+      text: 'Hello',
+      createdAt: 'not-a-date',
+    })
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects missing text', () => {
+    const result = actorSignatureSchema.safeParse({
+      createdAt: '2026-03-04T12:00:00.000Z',
+    })
+    expect(result.success).toBe(false)
   })
 })
