@@ -1,6 +1,6 @@
 {
   "name": "@singi-labs/lexicons",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "AT Protocol lexicon schemas and generated TypeScript types for the Barazo forum platform",
   "type": "module",
   "packageManager": "pnpm@10.29.2",
