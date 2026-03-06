@@ -32,7 +32,7 @@
     "test:watch": "vitest",
     "test:compat": "vitest run tests/backward-compatibility.test.ts",
     "test:coverage": "vitest run --coverage",
-    "generate": "lex gen-server ./src/generated ./lexicons/**/*.json && node scripts/fixup-generated.js",
+    "generate": "node scripts/generate.js",
     "clean": "rm -rf dist",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
