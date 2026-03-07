@@ -1,6 +1,9 @@
 # Claude Code
 .claude/
 
+# Git worktrees
+.worktrees/
+
 # Logs
 logs
 *.log
