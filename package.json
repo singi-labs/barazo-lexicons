@@ -1,5 +1,5 @@
 {
-  "name": "@singi-labs/lexicons",
+  "name": "@singi-labs/barazo-lexicons",
   "version": "0.3.0",
   "description": "AT Protocol lexicon schemas and generated TypeScript types for the Barazo forum platform",
   "type": "module",
