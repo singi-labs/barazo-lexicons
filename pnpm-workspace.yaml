@@ -9,7 +9,7 @@ catalog:
   eslint: '10.0.2'
   '@types/node': '25.3.3'
   '@commitlint/cli': '20.4.3'
-  '@commitlint/config-conventional': '20.4.3'
+  '@commitlint/config-conventional': '21.2.3'
   '@vitest/coverage-v8': '4.0.18'
   husky: '9.1.7'
   lint-staged: '16.3.2'
