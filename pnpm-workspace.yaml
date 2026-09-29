@@ -7,7 +7,7 @@ catalog:
   typescript: '5.9.3'
   typescript-eslint: '8.56.1'
   eslint: '10.0.2'
-  '@types/node': '25.3.3'
+  '@types/node': '26.6.3'
   '@commitlint/cli': '20.4.3'
   '@commitlint/config-conventional': '20.4.3'
   '@vitest/coverage-v8': '4.0.18'
